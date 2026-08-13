@@ -1,54 +1,66 @@
+html,
 body {
-  background-color: bisque;
-  border: 1px;
-  border-style: solid;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 568px;
-  align-items: center;
-  margin: 0%;
-  padding: 0%;
+  height: 96.7vh;
 }
 
 header {
-  background-color: #ffffff80;
-  padding-left: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  align-self: center;
-  font-size: large;
-}
-
-
-main .itens {
-  background-color: antiquewhite;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
+  border: 1px;
+  border-style: solid;
+  width: 100%;
+  height: 100px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.main-class{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-
-
-.itens {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
-  gap: 12px;
-}
-
-.itens > div{
-  background-color: rgb(255, 192, 114);
-  aspect-ratio: 50px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  color: rgb(0, 0, 0);
+  align-items: center;
+}
+
+.cabecalho {
+  width: 100%;
+  height: 80px;
+  border: 1px;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  border: 1px;
+  border-style: solid;
+  width: 100%;
+  height: 719px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  border: 1px;
+  border-style: solid;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.principal {
+  width: 80%;
+  height: 97%;
+  border: 1px;
+  border-style: solid;
+  background-color: beige;
+}
+
+img {
+  width: 100px;
+  height: auto;
+  border: 1px;
+  border-style: solid;
+  position: cover;
+  background-size: cover;
+  overflow: hidden;
+  box-shadow: 1px 1px 4px black;
 }
