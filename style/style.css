@@ -18,9 +18,37 @@ header {
   font-size: large;
 }
 
-main .itens{
+
+main .itens {
   background-color: antiquewhite;
   padding: 20px;
   border-radius: 15px;
-  text-align: justify;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-class{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+.itens {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+  gap: 12px;
+}
+
+.itens > div{
+  background-color: rgb(255, 192, 114);
+  aspect-ratio: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
 }
