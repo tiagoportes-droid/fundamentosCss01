@@ -64,3 +64,14 @@ img {
   overflow: hidden;
   box-shadow: 1px 1px 4px black;
 }
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.distribuicao {
+  display: flex;
+  justify-content: space-evenly;
+}
