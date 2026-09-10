@@ -157,3 +157,17 @@ footer {
 .btnCompra:active {
   transform: scale(0.95);
 }
+
+.btnComprar {
+  background-color: rgb(165, 91, 0);
+  color: rgb(255, 255, 255);
+  border: 2px solid #8b4513;
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

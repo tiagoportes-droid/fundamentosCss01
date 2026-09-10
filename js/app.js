@@ -1,6 +1,9 @@
 const apresentar = () => {
   const resposta = document.getElementById("resp");
-  resposta.innerText = `Olá mundo.`;
+  resposta.innerText = `Comprado com sucesso`;
+  setTimeout(() => {
+    resposta.innerText = ``
+  }, 3000);
 };
 
 const botao = document.getElementById("btnCompra");
