@@ -27,6 +27,7 @@ header {
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(180deg, rgb(156, 86, 0), rgb(155, 101, 0));
+  border-color: black;
 }
 
 .cabecalho {
