@@ -1,13 +1,34 @@
-const apresentar = () => {
-  const resposta = document.getElementById("resp");
-  resposta.innerText = `Comprado com sucesso`;
-  setTimeout(() => {
-    resposta.innerText = ``
-  }, 3000);
+const login = document.getElementById("txtLogin");
+const senha = document.getElementById("txtSenha");
+const divResposta = document.getElementById("resposta");
+const botao = document.getElementById("btnAcessar");
+
+const logins = [{ id: 1, email: "tiago.fportes@gmail.com", senha: "sla12345" }];
+
+const mostrar = () => {
+  const loginV = login.value;
+  const senhaV = senha.value;
+
+  divResposta.innerHTML = `
+        <p><strong>Login: </strong>${loginV}</p>
+        <p><strong>Senha: </strong>${senhaV}</p>
+    `;
+
+  const usuarioEncontrado = logins.find(
+    (usuario) => usuario.email === loginV && usuario.senha === senhaV,
+  );
+
+  if (usuarioEncontrado) {
+    divResposta.textContent = "Login efetuado com sucesso! Redirecionando...";
+
+    setTimeout(() => {
+      window.location.href = "../loja/index.html";
+    }, 2000);
+  } else {
+    divResposta.innerHTML = `
+        <p>Login ou senha incorretos.</p>
+        `;
+  }
 };
 
-const botao = document.getElementById("btnCompra");
-
-if (botao) {
-  botao.addEventListener("click", apresentar);
-}
+botao.addEventListener("click", mostrar);

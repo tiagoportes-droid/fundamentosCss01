@@ -1,0 +1,36 @@
+:root {
+  --cinza: rgb(67, 67, 67);
+  --cinza_escuro: rgb(52, 52, 52);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#resp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.05rem solid;
+  width: 6rem;
+  height: 1.5rem; /* 1rem = 16px*/
+  min-width: 6rem;
+  width: fit-content;
+  font-size: clamp(
+    1rem,
+    3vw,
+    2rem
+  ); /* Limita um valor entre (min, preferencial, maximo) */
+  background-color: black;
+  color: grey;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  border-color: rebeccapurple;
+}
+
+#resp.ativo {
+  background-color: var(--cinza_escuro);
+  color: var(--cinza);
+}
