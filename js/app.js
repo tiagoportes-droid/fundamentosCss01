@@ -14,6 +14,14 @@ const mostrar = () => {
         <p><strong>Senha: </strong>${senhaV}</p>
     `;
 
+  if (loginV === "" || senhaV === "") {
+    divResposta.innerHTML = `<p>Login e senha são obrigatórios</p>`;
+    setTimeout(() => {
+      divResposta.innerHTML = `<p></p>`;
+    }, 2000);
+    return;
+  }
+
   const usuarioEncontrado = logins.find(
     (usuario) => usuario.email === loginV && usuario.senha === senhaV,
   );
@@ -23,11 +31,14 @@ const mostrar = () => {
 
     setTimeout(() => {
       window.location.href = "../loja/index.html";
-    }, 2000);
+    }, 1500);
   } else {
     divResposta.innerHTML = `
         <p>Login ou senha incorretos.</p>
         `;
+    setTimeout(() => {
+      divResposta.innerHTML = `<p></p>`;
+    }, 1000);
   }
 };
 
