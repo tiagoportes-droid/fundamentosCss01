@@ -3,7 +3,7 @@ const senha = document.getElementById("txtSenha");
 const divResposta = document.getElementById("resposta");
 const botao = document.getElementById("btnAcessar");
 
-const logins = [{ id: 1, email: "tiago.fportes@gmail.com", senha: "sla12345" }];
+const logins = [{ id: 1, email: "admin", senha: "admin" }];
 
 const mostrar = () => {
   const loginV = login.value;
