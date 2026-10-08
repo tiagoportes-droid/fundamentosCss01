@@ -7,27 +7,31 @@
     <script type="module" src="./js/app.js" defer></script>
     <title>Consulta</title>
   </head>
+  <!-- HTML corrigido sem a tag <main> duplicada -->
   <body>
     <main>
       <h1>Dados Salvos no Sistema</h1>
-      <main>
-        <ul>
-          <li>
-            <strong>Nome: </strong>
-            <span id="resultadoNome"></span>
-          </li>
-          <li>
-            <strong>Cidade: </strong>
-            <span id="resultadoCidade"></span>
-          </li>
-          <li>
-            <strong>Observações: </strong>
-            <span id="resultadoObs"></span>
-          </li>
-        </ul>
-        <a href="../cadastro/cadastro.html">Novo Cadastro</a>
-        <a href="../../index.html">Voltar</a>
-      </main>
+      <ul>
+        <li>
+          <strong>Nome: </strong>
+          <span id="resultadoNome"></span>
+        </li>
+        <li>
+          <strong>Cidade: </strong>
+          <span id="resultadoCidade"></span>
+        </li>
+        <li>
+          <strong>Observações: </strong>
+          <span id="resultadoObs"></span>
+        </li>
+      </ul>
+
+      <div class="acoes">
+        <a href="../cadastro/cadastro.html" class="btn-primario"
+          >Novo Cadastro</a
+        >
+        <a href="../../index.html" class="btn-secundario">Voltar</a>
+      </div>
     </main>
   </body>
 </html>

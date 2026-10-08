@@ -1,0 +1,159 @@
+/* style/style.css */
+
+:root {
+  /* ===== CORES PRINCIPAIS ===== */
+  --marrom-principal: rgb(156, 86, 0);
+  --marrom-secundario: rgb(155, 101, 0);
+  --marrom-escuro: #8b4513;
+
+  /* ===== CORES DE FUNDO ===== */
+  --bege: beige;
+  --bege-claro: #fff8e7;
+
+  /* ===== CORES DE DESTAQUE ===== */
+  --dourado: #ffd700;
+  --laranja: #ff8c00;
+  --laranja-claro: rgb(253, 155, 35);
+
+  /* ===== CORES DE TEXTO ===== */
+  --branco: #ffffff;
+  --preto: #000000;
+  --marrom-texto: #4a2600;
+
+  /* ===== SOMBRAS ===== */
+  --sombra: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --sombra-forte: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+  /* ===== BORDAS ===== */
+  --borda: 2px solid var(--marrom-escuro);
+  --borda-preta: 1px solid var(--preto);
+
+  /* ===== GRADIENTES ===== */
+  --gradiente-fundo: linear-gradient(
+    180deg,
+    var(--marrom-principal),
+    var(--marrom-secundario)
+  );
+
+  --gradiente-dourado: linear-gradient(145deg, var(--dourado), #d4a017);
+
+  /* ===== ARREDONDAMENTO ===== */
+  --raio-pequeno: 6px;
+  --raio-medio: 10px;
+  --raio-grande: 15px;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: var(--gradiente-fundo);
+  color: var(--marrom-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Card Principal */
+main {
+  background-color: var(--bege-claro);
+  padding: 2.5rem;
+  border-radius: var(--raio-grande);
+  box-shadow: var(--sombra-forte);
+  border: var(--borda);
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Título */
+h1 {
+  font-size: 1.8rem;
+  color: var(--marrom-texto);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Rótulos */
+label {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--marrom-texto);
+  margin-bottom: -0.8rem; /* Aproxima o rótulo do campo */
+}
+
+/* Campos de Entrada (Inputs) */
+input[type="text"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--marrom-escuro);
+  border-radius: var(--raio-pequeno);
+  background-color: var(--branco);
+  color: var(--marrom-texto);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: var(--laranja);
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.3);
+}
+
+/* Botão Enviar */
+#btnSubmit {
+  margin-top: 0.5rem;
+  padding: 0.9rem;
+  background-color: var(--laranja);
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 1rem;
+  border: var(--borda-preta);
+  border-radius: var(--raio-medio);
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#btnSubmit:hover {
+  background-color: var(--laranja-claro);
+  color: var(--marrom-texto);
+  transform: translateY(-2px);
+}
+
+#btnSubmit:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Link Voltar */
+main > a {
+  display: block;
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--marrom-escuro);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+main > a:hover {
+  color: var(--laranja);
+  text-decoration: underline;
+}
