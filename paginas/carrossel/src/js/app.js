@@ -1,12 +1,13 @@
 const telaCarousel = document.getElementById("potionCarrosel");
 const BtnEsquerda = document.getElementById("BtnEsquerda");
 const BtnDireita = document.getElementById("BtnDireita");
+const resposta = document.getElementById("titulo");
 
 // Array unificado com todas as poções da sua pasta
 const pocoes = [
   "./src/componente/carousel/potion.png",
   "./src/componente/carousel/pocao-de-alta-saude.webp",
-  "./src/componente/carousel/a-green-potion-png.webp"
+  "./src/componente/carousel/a-green-potion-png.webp",
 ];
 
 let indiceAtual = 0;
@@ -48,6 +49,13 @@ if (BtnEsquerda) {
 
 // Troca automática das imagens
 setInterval(proximoSlide, intervalo);
+
+setTimeout(() => {
+  resposta.innerText = `Levando Usuario para a página de espera..`;
+  setTimeout(() => {
+    window.location.href = "../loja/index.html";
+  }, 3000);
+}, 30000); // 30seg
 
 // Renderização inicial
 atualizarCarousel();

@@ -33,11 +33,7 @@
     var(--marrom-secundario)
   );
 
-  --gradiente-dourado: linear-gradient(
-    145deg,
-    var(--dourado),
-    #d4a017
-  );
+  --gradiente-dourado: linear-gradient(145deg, var(--dourado), #d4a017);
 
   /* ===== ARREDONDAMENTO ===== */
   --raio-pequeno: 6px;
@@ -57,20 +53,79 @@ body {
 }
 
 /* ===== BODY ===== */
+/* ===== BODY ===== */
 body {
   min-height: 100vh;
   background: var(--marrom-escuro);
+
+  /* Transforma o body em um container flexível em coluna */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente na tela */
+  align-items: center; /* Centraliza horizontalmente tudo (header e main) */
+  gap: 20px; /* Cria um espaço seguro entre o header e o carrossel */
+  margin: 0;
+  padding: 20px;
+}
+
+/* ====== HEADER ======= */
+header {
+  border: var(--borda-preta);
+  border-radius: var(--raio-medio);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(
+    --laranja
+  ); /* Se quiser que o header tenha a mesma cor do carrossel */
+  border: var(--borda);
+  box-shadow: var(--sombra-forte);
+
+  width: min(
+    700px,
+    90%
+  ); /* Mesma largura máxima do carrossel para ficarem alinhados simetricamente */
 }
 
 /* ===== MAIN ===== */
 main {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  background: var(--marrom-escuro);
+  padding: 0; /* Removido o padding excessivo para o gap do body controlar o espaçamento */
+  background: transparent; /* Deixa o fundo transparente para herdar o marrom do body */
+}
+
+/* ====== HEADER ======= */
+header {
+  border: var(--borda-preta);
+  border-radius: var(--raio-medio);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(
+    --laranja
+  ); /* Se quiser que o header tenha a mesma cor do carrossel */
+  border: var(--borda);
+  box-shadow: var(--sombra-forte);
+
+  width: min(
+    700px,
+    90%
+  ); /* Mesma largura máxima do carrossel para ficarem alinhados simetricamente */
+}
+
+/* ===== MAIN ===== */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Removido o padding excessivo para o gap do body controlar o espaçamento */
+  background: transparent; /* Deixa o fundo transparente para herdar o marrom do body */
 }
 
 /* ===== CONTAINER DO CARROSSEL ===== */
@@ -138,11 +193,11 @@ main {
 
   /* Ajustes da Imagem de Fundo */
   background-position: center;
-  background-size: contain; /* Exibe a imagem inteira sem cortar */
+  background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--bege-claro);
   border-radius: var(--raio-medio);
-  padding: 15px; /* Espaço para a poção respirar */
+  padding: 15px;
 }
 
 /* ===== SLIDE ===== */
@@ -175,4 +230,19 @@ main {
     width: 25px;
     height: 25px;
   }
+}
+
+/* ===== TITULO ===== */
+.titulo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: min(335px, 90%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: var(--laranja);
+  border: var(--borda);
+  border-radius: var(--raio-grande);
+  box-shadow: var(--sombra-forte);
 }
