@@ -12,7 +12,7 @@ botoesPocao.forEach((botao) => {
   botao.addEventListener("click", () => {
     quantidadePocao += 1;
     quantidade.innerText = quantidadePocao;
-    if(quantidadePocao === 8){
+    if (quantidadePocao === 8) {
       resposta.innerText = "Numero maximo de poções";
       quantidadePocao -= 1;
       numeroMaxPotion = true;
@@ -25,17 +25,21 @@ botaoComprar.addEventListener("click", () => {
     resposta.innerText = "Comprado com sucesso";
     compradoPotion = true;
 
+    if (quantidadePocao === 0) {
+      resposta.innerText = `Selecione ao menos uma poção`;
+    }
+
     setTimeout(() => {
       resposta.innerText = "";
       quantidadePocao = 0;
       quantidade.innerText = quantidadePocao;
     }, 2500);
 
-    if(compradoPotion && numeroMaxPotion){
-      resposta.innerText = `Levendo Usuario para a página de espera..`
-          setTimeout(() => {
-      window.location.href = "../carrossel/index.html";
-    }, 1500);
+    if (compradoPotion && numeroMaxPotion) {
+      resposta.innerText = `Levando Usuario para a página de espera..`;
+      setTimeout(() => {
+        window.location.href = "../carrossel/index.html";
+      }, 1500);
     }
   }
 });
