@@ -1,0 +1,116 @@
+/* style/style.css */
+
+:root {
+  /* ===== CORES PRINCIPAIS ===== */
+  --marrom-principal: rgb(156, 86, 0);
+  --marrom-secundario: rgb(155, 101, 0);
+  --marrom-escuro: #8b4513;
+
+  /* ===== CORES DE FUNDO ===== */
+  --bege: beige;
+  --bege-claro: #fff8e7;
+
+  /* ===== CORES DE DESTAQUE ===== */
+  --dourado: #ffd700;
+  --laranja: #ff8c00;
+  --laranja-claro: rgb(253, 155, 35);
+
+  /* ===== CORES DE TEXTO ===== */
+  --branco: #ffffff;
+  --preto: #000000;
+  --marrom-texto: #4a2600;
+
+  /* ===== SOMBRAS ===== */
+  --sombra: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --sombra-forte: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+  /* ===== BORDAS ===== */
+  --borda: 2px solid var(--marrom-escuro);
+  --borda-preta: 1px solid var(--preto);
+
+  /* ===== GRADIENTES ===== */
+  --gradiente-fundo: linear-gradient(
+    180deg,
+    var(--marrom-principal),
+    var(--marrom-secundario)
+  );
+
+  --gradiente-dourado: linear-gradient(145deg, var(--dourado), #d4a017);
+
+  /* ===== ARREDONDAMENTO ===== */
+  --raio-pequeno: 6px;
+  --raio-medio: 10px;
+  --raio-grande: 15px;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: var(--gradiente-fundo);
+  color: var(--marrom-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card Principal */
+main {
+  background-color: var(--bege-claro);
+  padding: 2.5rem;
+  border-radius: var(--raio-grande);
+  box-shadow: var(--sombra-forte);
+  border: var(--borda);
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+}
+
+/* Título */
+h1 {
+  font-size: 1.8rem;
+  color: var(--marrom-texto);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Lista de Links */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Botões da Navegação */
+nav a {
+  display: block;
+  padding: 0.9rem 1.2rem;
+  background-color: var(--laranja);
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: var(--raio-medio);
+  border: var(--borda-preta);
+  box-shadow: var(--sombra);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efeitos de Hover e Clique */
+nav a:hover {
+  background-color: var(--laranja-claro);
+  color: var(--marrom-texto);
+  transform: translateY(-3px);
+}
+
+nav a:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
