@@ -51,7 +51,9 @@ if (BtnEsquerda) {
 setInterval(proximoSlide, intervalo);
 
 setTimeout(() => {
-  resposta.innerText = `Levando Usuario para a página de espera..`;
+  if(resposta){
+    resposta.innerText = `Levando Usuario para a página de espera..`;
+  }
   setTimeout(() => {
     window.location.href = "../loja/index.html";
   }, 3000);
